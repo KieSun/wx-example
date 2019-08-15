@@ -7,7 +7,8 @@
 
 <script>
 import HelloWorld from "./components/HelloWorld.vue";
-import { getAuthRedirectURI } from "./utils";
+// import { getAuthRedirectURI } from "./utils";
+import axios from "axios";
 
 export default {
   name: "app",
@@ -15,11 +16,12 @@ export default {
     HelloWorld
   },
   mounted() {
-    window.location.href = getAuthRedirectURI({
-      appid: "wx74950e3d3ca6433a",
-      redirect_uri: "http://local.yuchengkai.org:8080",
-      scope: "snsapi_userinfo"
-    });
+    // window.location.href = getAuthRedirectURI({
+    //   appid: "wx74950e3d3ca6433a",
+    //   redirect_uri: "http://local.yuchengkai.org:8080",
+    //   scope: "snsapi_userinfo"
+    // });
+    axios.get("/api/");
   }
 };
 </script>
