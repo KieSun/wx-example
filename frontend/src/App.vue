@@ -17,7 +17,7 @@ export default {
   mounted() {
     window.location.href = getAuthRedirectURI({
       appid: "wx74950e3d3ca6433a",
-      redirect_uri: "http://local.yuchengkai.org",
+      redirect_uri: "http://local.yuchengkai.org:8080",
       scope: "snsapi_userinfo"
     });
   }
