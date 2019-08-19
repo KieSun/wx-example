@@ -27,7 +27,7 @@ router.get('/getToken', async ctx => {
   if (success)
     ctx.cookies.set('openId', data.openid, {
       maxAge: 30 * 60 * 60 * 24,
-      httpOnly: false // 是否只用于http请求中获取
+      httpOnly: false
     })
   if (url) {
     ctx.redirect(url)
